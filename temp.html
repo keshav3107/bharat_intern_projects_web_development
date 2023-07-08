@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title> tempconv</title>
+        <style>
+          body{
+            text-align:center; background-color: cyan;
+          }
+        </style>
+        <script>
+
+function tc(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
+}
+function tc1(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("Fah").innerHTML = 1.8*valNum+32;
+}         
+        </script>
+    </head>
+    <body>
+        <h1>Temperature Conversion: Fahrenheit to Celcius</h1>
+        <p>
+            <label>Fahrenheit</label>
+            <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="tc(this.value)" onchange="tc(this.value)">
+          </p>
+          <p>Celsius: <span id="outputCelsius"></span></p>
+
+          <h1>Temperature Conversion: Celcius to Fahrenheit</h1>
+        <p>
+            <label>Celcius</label>
+            <input id="inputCelcius" type="number" placeholder="Celcius" oninput="tc1(this.value)" onchange="tc1(this.value)">
+          </p>
+          <p>Celsius: <span id="Fah"></span></p>
+    </body>
